@@ -100,8 +100,9 @@ if ($filterDateTo) {
 }
 
 if ($searchQuery) {
-    $where[] = "(posts.title LIKE :search OR posts.content LIKE :search)";
-    $params['search'] = '%' . $searchQuery . '%';
+    $where[] = "(posts.title LIKE :search_title OR posts.content LIKE :search_content)";
+    $params['search_title'] = '%' . $searchQuery . '%';
+    $params['search_content'] = '%' . $searchQuery . '%';
 }
 
 $whereClause = $where ? 'WHERE ' . implode(' AND ', $where) : '';
