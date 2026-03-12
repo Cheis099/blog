@@ -4,7 +4,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone <URL>
+git clone https://github.com/Cheis099/blog.git
 cd pr
 ```
 
